@@ -1,0 +1,84 @@
+/* universal selectors */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Righteous';
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #03001C;
+    color: #B6EADA;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+img,
+div {
+    width: 200px;
+    height: auto;
+    padding: 0.25rem;
+}
+
+#days {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+img, button {
+    border-radius: 0.5rem;
+    background-color: #B6EADA;
+    border: 0.125rem solid #03001C;
+}
+
+/* Header and Main */
+header, main, article, section {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    flex-direction: row-reverse;
+    gap: 0.75rem;
+    font-size: 1.5rem;
+    -webkit-text-stroke: 0.0725rem #03001C;
+    text-shadow: 4px 6px 8px #5B8FB9;
+}
+
+main {
+    margin-top: 1rem;
+}
+
+/* Article */
+
+article {
+    flex-direction: column;
+}
+
+section {
+    gap: 3rem;
+    margin-bottom: 1rem;
+}
+
+
+/* Button */
+button {
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #03001C;
+    box-shadow: 4px 6px 14px #5B8FB9;
+}
+
+button:active {
+    background-color: #03001C;
+    color: #5B8FB9; 
+}
