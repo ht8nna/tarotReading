@@ -26,11 +26,6 @@ div {
     padding: 0.25rem;
 }
 
-#days {
-    font-size: 1.5rem;
-    text-align: center;
-}
-
 img, button {
     border-radius: 0.5rem;
     background-color: #B6EADA;
@@ -46,7 +41,8 @@ header, main, article, section {
 }
 
 header {
-    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    text-align: center;
     gap: 0.75rem;
     font-size: 1.5rem;
     -webkit-text-stroke: 0.0725rem #03001C;
@@ -64,9 +60,13 @@ article {
 }
 
 section {
-    gap: 3rem;
+    gap: 2rem;
     margin-bottom: 1rem;
 }
+
+#day1, #day2, #day3 {
+    flex-direction: column;
+} 
 
 
 /* Button */
@@ -76,9 +76,18 @@ button {
     font-weight: 700;
     color: #03001C;
     box-shadow: 4px 6px 14px #5B8FB9;
+    margin-bottom: 2rem;
 }
 
 button:active {
     background-color: #03001C;
     color: #5B8FB9; 
+}
+
+/* Responsive */
+
+@media screen and (max-width: 768px) {
+    section {
+        flex-direction: column;
+    }
 }

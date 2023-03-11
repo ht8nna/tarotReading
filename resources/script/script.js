@@ -161,21 +161,30 @@ const thirdCard = (a, b) => {
 
     const card1 = document.createElement('img');
     const message1 = document.createElement('div');
-    const day1 = document.createElement('div');
+    const st = document.createElement('h3');
 
     const card2 = document.createElement('img');
     const message2 = document.createElement('div');
-    const day2 = document.createElement('div');
+    const nd = document.createElement('h3');
 
     const card3 = document.createElement('img');
     const message3 = document.createElement('div');
-    const day3 = document.createElement('div');
+    const rd = document.createElement('h3');
 
 const getReading = () => {
-    const cards = document.querySelector('#cards');
-    for (let i = 0; i < cards.length; i++) {
-        cards.removeChild();
+    const day1 = document.querySelector('#day1');
+    const day2 = document.querySelector('#day2');
+    const day3 = document.querySelector('#day3');
+    for (let i = 0; i < day1.length; i++) {
+        day1.removeChild();
     }
+    for (let i = 0; i < day2.length; i++) {
+        day2.removeChild();
+    }
+    for (let i = 0; i < day3.length; i++) {
+        day3.removeChild();
+    }
+
 
     const yesterday = firstCard();
     const today = secondCard(yesterday);
@@ -183,29 +192,27 @@ const getReading = () => {
 
     card1.src = yesterday['path'];
     message1.textContent = 'Yesterday\'s lesson was about ' + yesterday['meaning'];
-    day1.textContent = 'Yesterday';
+    st.textContent = 'Yesterday';
 
     card2.src = today['path'];
     message2.textContent = 'Today is about ' + today['meaning'];
-    day2.textContent = 'Today';
+    nd.textContent = 'Today';
 
     card3.src = tomorrow['path'];
     message3.textContent = 'Tomorrow advises ' + tomorrow['meaning'];
-    day3.textContent = 'Tomorrow';
+    rd.textContent = 'Tomorrow';
 
-    cards.appendChild(card1);
-    cards.appendChild(card2);
-    cards.appendChild(card3);
+    day1.appendChild(st);
+    day2.appendChild(nd);
+    day3.appendChild(rd);
 
-    const message = document.querySelector('#messages');
-    message.appendChild(message1);
-    message.appendChild(message2);
-    message.appendChild(message3);
+    day1.appendChild(card1);
+    day2.appendChild(card2);
+    day3.appendChild(card3);
 
-    const days = document.querySelector('#days');
-    days.appendChild(day1);
-    days.appendChild(day2);
-    days.appendChild(day3);
+    day1.appendChild(message1);
+    day2.appendChild(message2);
+    day3.appendChild(message3);
 
 }
 
