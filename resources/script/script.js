@@ -214,6 +214,8 @@ const getReading = () => {
     day2.appendChild(message2);
     day3.appendChild(message3);
 
+    reading.textContent = 'Get Another Reading';
+
 }
 
 const reading = document.querySelector('button');

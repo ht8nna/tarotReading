@@ -33,7 +33,7 @@ img, button {
 }
 
 /* Header and Main */
-header, main, article, section {
+header, main, article {
     padding: 0.5rem;
     display: flex;
     justify-content: center;
@@ -60,12 +60,16 @@ article {
 }
 
 section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     gap: 2rem;
     margin-bottom: 1rem;
 }
 
 #day1, #day2, #day3 {
     flex-direction: column;
+    align-items: center;
 } 
 
 
